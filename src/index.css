@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  /* Mesmos nomes de antes, valores novos (estilo praia),
+     então o resto do site não quebra */
+  --color-areia: #F8F1DF;      /* areia clara */
+  --color-ferrugem: #E4572E;   /* coral / pôr do sol */
+  --color-mata: #0E6B54;       /* verde de palmeira */
+  --color-noite: #062A3D;      /* azul oceano profundo */
+  --color-laranja: #FFA630;    /* sol */
+  --color-mar: #19B5C4;        /* turquesa do mar (novo) */
+
+  --font-titulo: "Fraunces", Georgia, serif;
+  --font-texto: "Instrument Sans", system-ui, sans-serif;
+
+  --animate-estrada: estrada 1.1s linear infinite;
+  --animate-balanco: balanco 0.7s ease-in-out infinite alternate;
+  --animate-palma: palma 6s ease-in-out infinite alternate;
+  --animate-roda: roda 0.5s linear infinite;
+  --animate-flutuar: flutuar 4s ease-in-out infinite alternate;
+
+  @keyframes estrada {
+    to { background-position-x: -80px; }
+  }
+  @keyframes balanco {
+    to { transform: translateY(-2px); }
+  }
+  @keyframes palma {
+    from { transform: rotate(-1.8deg); }
+    to { transform: rotate(1.8deg); }
+  }
+  @keyframes roda {
+    to { transform: rotate(360deg); }
+  }
+  @keyframes flutuar {
+    to { transform: translateY(-12px); }
+  }
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-noite font-texto text-areia antialiased; }
+}

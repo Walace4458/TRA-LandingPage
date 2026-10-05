@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import AgendaWhatsApp from './AgendaWhatsApp'
+import AgendaWhatsApp from './AgendawhatsApp'
 
 // ============================================================
 // IMAGENS
